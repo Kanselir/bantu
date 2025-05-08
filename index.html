@@ -74,5 +74,48 @@
       </table>
     </div>
   </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const tableContainer = document.querySelector('.table-container');
+      
+      // Add scrollable class if content is wider than container
+      function checkScrollable() {
+        if (tableContainer.scrollWidth > tableContainer.clientWidth) {
+          tableContainer.classList.add('scrollable');
+        } else {
+          tableContainer.classList.remove('scrollable');
+        }
+      }
+      
+      // Check on load and resize
+      checkScrollable();
+      window.addEventListener('resize', checkScrollable);
+      
+      // Add touch scroll indicator
+      let touchStartX = 0;
+      let touchEndX = 0;
+      
+      tableContainer.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, false);
+      
+      tableContainer.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+      }, false);
+      
+      function handleSwipe() {
+        const swipeThreshold = 50;
+        if (touchEndX < touchStartX - swipeThreshold) {
+          // Swipe left
+          tableContainer.scrollBy({ left: 200, behavior: 'smooth' });
+        }
+        if (touchEndX > touchStartX + swipeThreshold) {
+          // Swipe right
+          tableContainer.scrollBy({ left: -200, behavior: 'smooth' });
+        }
+      }
+    });
+  </script>
 </body>
 </html> 
