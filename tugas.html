@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengingat Tugas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">SekolahKu</div>
+    <ul>
+      <li><a href="index.html">Jadwal</a></li>
+      <li><a href="tugas.html" class="active">Tugas</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h1>Pengingat Tugas</h1>
+    <form id="form-tugas">
+      <input type="text" id="nama-tugas" placeholder="Nama Tugas" required>
+      <input type="text" id="mapel-tugas" placeholder="Mata Pelajaran" required>
+      <input type="date" id="deadline-tugas" required>
+      <button type="submit">Tambah Tugas</button>
+    </form>
+    <ul id="daftar-tugas"></ul>
+  </main>
+  <script src="tugas.js"></script>
+</body>
+</html> 

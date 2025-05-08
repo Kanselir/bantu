@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f6f8fc;
+  color: #222;
+}
+nav {
+  background: #4f8cff;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 60px;
+  box-shadow: 0 2px 8px #0001;
+}
+nav .logo {
+  font-weight: bold;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 20px;
+  transition: background 0.2s;
+}
+nav ul li a.active, nav ul li a:hover {
+  background: #fff3;
+}
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px #0002;
+  padding: 2rem;
+}
+h1 {
+  text-align: center;
+  color: #4f8cff;
+  margin-bottom: 2rem;
+}
+/* Jadwal Table */
+table.jadwal {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  background: #f0f6ff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px #4f8cff22;
+}
+table.jadwal th, table.jadwal td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #e3eafc;
+}
+table.jadwal th {
+  background: #4f8cff;
+  color: #fff;
+  font-weight: 600;
+}
+table.jadwal tr:last-child td {
+  border-bottom: none;
+}
+/* Form Tugas */
+form#form-tugas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+form#form-tugas input, form#form-tugas button {
+  padding: 0.7rem 1rem;
+  border: 1px solid #c3dafe;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+form#form-tugas input:focus {
+  outline: 2px solid #4f8cff;
+}
+form#form-tugas button {
+  background: #4f8cff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+form#form-tugas button:hover {
+  background: #2563eb;
+}
+/* Daftar Tugas */
+#daftar-tugas {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+#daftar-tugas li {
+  background: #e3eafc;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px #4f8cff11;
+  animation: fadeIn 0.5s;
+}
+#daftar-tugas li .info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+#daftar-tugas li .deadline {
+  color: #2563eb;
+  font-size: 0.95em;
+}
+#daftar-tugas li button {
+  background: #ff4f4f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#daftar-tugas li button:hover {
+  background: #d90429;
+}
+@media (max-width: 700px) {
+  main {
+    padding: 1rem;
+  }
+  table.jadwal th, table.jadwal td {
+    padding: 0.5rem;
+    font-size: 0.95em;
+  }
+  form#form-tugas {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+} 
